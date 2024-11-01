@@ -21,6 +21,8 @@ public interface ShopCom {
     String PRINT_MAX_OF_PRICE_PRODUCT = "9";
     String PRINT_MIN_OF_PRICE_PRODUCT = "10";
     String PRINT_AVG_OF_PRICE_PRODUCT = "11";
+    String PRINT_ALL_PRODUCT = "12";
+    String PRINT_ALL_CATEGORY = "13";
 
 
     static void printCommands() {
@@ -36,7 +38,7 @@ public interface ShopCom {
         System.out.println("Введите '" + PRINT_MAX_OF_PRICE_PRODUCT + "' для вывода максимальной цены продукта.");
         System.out.println("Введите '" + PRINT_MIN_OF_PRICE_PRODUCT + "' для вывода минимальной цены продукта.");
         System.out.println("Введите '" + PRINT_AVG_OF_PRICE_PRODUCT + "' для вывода средней цены продукта.");
-
+        System.out.println("Введите '" + PRINT_ALL_PRODUCT + "' для вывода всех продуктов.");
+        System.out.println("Введите '" + PRINT_ALL_CATEGORY + "' для вывода всех категорий.");
     }
-
 }

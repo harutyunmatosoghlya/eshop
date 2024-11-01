@@ -146,7 +146,14 @@ public class ProductService {
         String sql = "SELECT * FROM product WHERE id = " + id;
         try (ResultSet resultSet = connection.createStatement().executeQuery(sql)) {
             if (resultSet.next()) {
-                return Product.builder().id(resultSet.getInt("id")).name(resultSet.getString("name")).description(resultSet.getString("description")).price(resultSet.getDouble("price")).quantity(resultSet.getInt("quantity")).category(CategoryService.getCategoryById(resultSet.getInt("category_id"))).build();
+                return Product.builder()
+                        .id(resultSet.getInt("id"))
+                        .name(resultSet.getString("name"))
+                        .description(resultSet.getString("description"))
+                        .price(resultSet.getDouble("price"))
+                        .quantity(resultSet.getInt("quantity"))
+                        .category(CategoryService.getCategoryById(resultSet.getInt("category_id")))
+                        .build();
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -159,7 +166,14 @@ public class ProductService {
         String sql = "SELECT * FROM product";
         try (ResultSet resultSet = connection.createStatement().executeQuery(sql)) {
             while (resultSet.next()) {
-                products.add(Product.builder().id(resultSet.getInt("id")).name(resultSet.getString("name")).description(resultSet.getString("description")).price(resultSet.getDouble("price")).quantity(resultSet.getInt("quantity")).category(CategoryService.getCategoryById(resultSet.getInt("category_id"))).build());
+                products.add(Product.builder()
+                        .id(resultSet.getInt("id"))
+                        .name(resultSet.getString("name"))
+                        .description(resultSet.getString("description"))
+                        .price(resultSet.getDouble("price"))
+                        .quantity(resultSet.getInt("quantity"))
+                        .category(CategoryService.getCategoryById(resultSet.getInt("category_id")))
+                        .build());
             }
         } catch (SQLException e) {
             e.printStackTrace();

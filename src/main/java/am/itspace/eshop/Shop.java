@@ -22,6 +22,8 @@ public class Shop implements ShopCom {
                 case PRINT_MAX_OF_PRICE_PRODUCT -> System.out.println(ps.getMaxPrice());
                 case PRINT_MIN_OF_PRICE_PRODUCT -> System.out.println(ps.getMinPrice());
                 case PRINT_AVG_OF_PRICE_PRODUCT -> System.out.println(ps.getAveragePrice());
+                case PRINT_ALL_PRODUCT -> System.out.println(ps.getAllProduct());
+                case PRINT_ALL_CATEGORY -> System.out.println(cs.getAllCategory());
                 default -> System.out.println("Неправильная команда");
             }
         }
