@@ -1,10 +1,5 @@
 package am.itspace.eshop;
 
-import am.itspace.services.CategoryService;
-import am.itspace.services.ProductService;
-
-import java.util.Scanner;
-
 public interface ShopCom {
     String EXIT = "0";
     String ADD_CATEGORY = "1";
