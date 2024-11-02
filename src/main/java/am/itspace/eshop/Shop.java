@@ -3,8 +3,14 @@ package am.itspace.eshop;
 import am.itspace.model.Category;
 import am.itspace.model.Product;
 import am.itspace.services.CategoryService;
+import am.itspace.services.ProductService;
+
+import java.util.Scanner;
 
 public class Shop implements ShopCom {
+    private static final CategoryService cs = new CategoryService();
+    private static final ProductService ps = new ProductService();
+    private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         boolean isRun = true;
         while (isRun) {

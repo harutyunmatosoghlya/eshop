@@ -6,9 +6,6 @@ import am.itspace.services.ProductService;
 import java.util.Scanner;
 
 public interface ShopCom {
-    CategoryService cs = new CategoryService();
-    ProductService ps = new ProductService();
-    Scanner scanner = new Scanner(System.in);
     String EXIT = "0";
     String ADD_CATEGORY = "1";
     String EDIT_CATEGORY_BY_ID = "2";
