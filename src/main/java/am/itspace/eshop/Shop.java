@@ -16,7 +16,7 @@ public class Shop implements ShopCom {
         while (isRun) {
             ShopCom.printCommands();
             switch (scanner.nextLine()) {
-                case EXIT -> isRun = false;
+                case EXIT -> isRun = exit();
                 case ADD_CATEGORY -> cs.add(addCategory());
                 case EDIT_CATEGORY_BY_ID -> editCategory();
                 case DELETE_CATEGORY_BY_ID -> cs.deleteCategory(deleteCategory());
@@ -30,9 +30,22 @@ public class Shop implements ShopCom {
                 case PRINT_AVG_OF_PRICE_PRODUCT -> System.out.println(ps.getAveragePrice());
                 case PRINT_ALL_PRODUCT -> System.out.println(ps.getAllProduct());
                 case PRINT_ALL_CATEGORY -> System.out.println(cs.getAllCategory());
-                default -> System.out.println("Неправильная команда");
+                default -> System.err.println("Неправильная команда");
             }
         }
+    }
+
+    private static boolean exit() {
+        try {
+            System.out.print("выход");
+            for (int i = 0; i < 3; i++) {
+                Thread.sleep(500);
+                System.out.print(".");
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     private static int deleteProduct() {
