@@ -16,7 +16,6 @@ public interface ShopCom {
     String PRINT_ALL_PRODUCT = "12";
     String PRINT_ALL_CATEGORY = "13";
 
-
     static void printCommands() {
         System.out.println("Введите '" + EXIT + "' для выхода.");
         System.out.println("Введите '" + ADD_CATEGORY + "' для добавления новой категории.");
